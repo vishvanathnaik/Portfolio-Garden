@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ContentCard } from "@/components/content-card";
 import { ArrowIcon, SparkIcon } from "@/components/icons";
 import { content, nowItems, topics } from "@/lib/content";
+import { capabilities, experience } from "@/lib/profile";
 
 export default function Home() {
   return (
@@ -10,13 +11,12 @@ export default function Home() {
         <div className="hero-copy reveal">
           <p className="eyebrow"><span>✦</span> Engineer · operator · curious generalist</p>
           <h1>I make sense of <em>complex systems</em>—then turn insight into useful work.</h1>
-          <p className="hero-intro">
-            I&apos;m Vishvanath. I explore how engineering, operations, markets, and people connect—through projects, essays, and notes from the field.
-          </p>
+          <p className="hero-intro">I&apos;m Vishvanath—a chemical engineering graduate with experience across market research, program management, customer insight, and frontline operations.</p>
           <div className="hero-actions">
             <Link className="button primary" href="/projects/">Explore my work <ArrowIcon /></Link>
-            <Link className="button quiet" href="/about/">More about me</Link>
+            <Link className="button quiet" href="/resume/">View résumé</Link>
           </div>
+          <p className="availability"><span>●</span> Based in Berlin · Open to full-time opportunities</p>
         </div>
 
         <div className="garden-map reveal delay-one" aria-label="A map of connected interests">
@@ -76,6 +76,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="proof-section shell">
+        <div className="section-heading">
+          <div><p className="eyebrow"><span>✦</span> Experience & capabilities</p><h2>Engineering discipline,<br />commercial curiosity.</h2></div>
+          <Link className="text-link desktop-link" href="/resume/">View full résumé <span aria-hidden="true">→</span></Link>
+        </div>
+        <div className="proof-grid">
+          <ol className="compact-experience">
+            {experience.map((item) => <li key={item.company}><span>{item.period}</span><strong>{item.company}</strong><p>{item.role}</p></li>)}
+          </ol>
+          <div className="compact-capabilities">
+            {capabilities.map((item, index) => <div key={item.title}><span>0{index + 1}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div></div>)}
+          </div>
+        </div>
+        <Link className="text-link mobile-link" href="/resume/">View full résumé <span aria-hidden="true">→</span></Link>
+      </section>
+
       <section className="writing-section shell">
         <div className="section-heading">
           <div>
@@ -85,7 +101,7 @@ export default function Home() {
           <Link className="text-link" href="/writing/">Browse all writing <span aria-hidden="true">→</span></Link>
         </div>
         <div className="notebook-list">
-          {content.slice(1).map((item) => (
+          {content.filter((item) => item.kind !== "project").map((item) => (
             <Link className="notebook-row" href={item.href} key={item.title}>
               <span className="notebook-index">{item.index}</span>
               <span className="notebook-kind">{item.kind}</span>

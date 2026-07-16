@@ -6,12 +6,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://vishvanathnaik.com"),
   title: { default: "Vishvanath Naik — Systems, stories & useful work", template: "%s — Vishvanath Naik" },
-  description: "Projects, essays, and field notes across engineering, operations, markets, and energy.",
+  description: "Portfolio of Vishvanath Naik: projects, experience, essays, and field notes across marketing, operations, engineering, markets, AI, and energy.",
   openGraph: {
     title: "Vishvanath Naik — Systems, stories & useful work",
-    description: "An evolving portfolio of projects, essays, and field notes.",
+    description: "Projects and experience connecting engineering, customers, operations, markets, AI, and energy.",
+    url: "https://vishvanathnaik.com",
+    siteName: "Vishvanath Naik",
     type: "website",
   },
+  twitter: { card: "summary", title: "Vishvanath Naik — Systems, stories & useful work", description: "Projects and experience across engineering, marketing, operations, markets, AI, and energy." },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -24,6 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main id="main">{children}</main>
           <SiteFooter />
         </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Person", name: "Vishvanath Naik", url: "https://vishvanathnaik.com", homeLocation: { "@type": "Place", name: "Berlin, Germany" }, knowsAbout: ["Chemical engineering", "Marketing", "Operations", "Customer research", "Growth strategy", "Energy", "Artificial intelligence"] }) }} />
       </body>
     </html>
   );

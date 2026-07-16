@@ -6,7 +6,7 @@ A responsive, editorial portfolio designed as a growing digital garden. It bring
 
 - A polished, responsive homepage
 - Reusable layout, navigation, content cards, type, color, spacing, and motion tokens
-- Routes for About, Projects, Writing, Notes, Reading, Now, Contact, and Mind Map
+- Routes for About, Projects, Writing, Notes, Reading, Now, Résumé, Contact, and Mind Map
 - Centralized starter content in `lib/content.ts`
 - Centralized, intentionally blank contact fields in `lib/site.ts`
 - Static export suitable for GitHub Pages
@@ -45,16 +45,16 @@ Most homepage content and taxonomy live in `lib/content.ts`. Each item has:
 - `topics`: shared concepts that will power the future mind map
 - `href`: the item’s route or anchor
 
-Before publishing, add only verified public email and social URLs to `lib/site.ts`, then render the desired links on the Contact page/footer. The preview deliberately does not invent them.
+Verified public email and social URLs are centralized in `lib/site.ts`. Experience, education, research, and capabilities are centralized in `lib/profile.ts`.
 
 ## Deploy on GitHub Pages
 
 1. Push this project to `vishvanathnaik/Portfolio-Garden` with `main` as the default branch.
 2. In **Settings → Pages**, choose **GitHub Actions** as the source.
 3. Push to `main` or run the **Deploy to GitHub Pages** workflow manually.
-4. For a custom domain, add it in GitHub Pages settings and create a `public/CNAME` file containing only the verified domain.
+4. The included `public/CNAME` publishes the site at `vishvanathnaik.com`; GitHub Pages must use that same custom-domain setting.
 
-The included workflow sets `NEXT_PUBLIC_BASE_PATH=/Portfolio-Garden`, so assets and navigation work at the project-site URL. For a custom domain or a `username.github.io` repository, remove that workflow environment variable.
+The workflow builds for the custom domain at the root path. To return to a project-site URL, remove `public/CNAME` and set `NEXT_PUBLIC_BASE_PATH=/Portfolio-Garden` for the build step.
 
 ## Suggested next content pass
 

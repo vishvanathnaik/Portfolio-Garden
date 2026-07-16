@@ -1,7 +1,9 @@
-// Add verified public contact details here before publishing.
 export const site = {
   name: "Vishvanath Naik",
-  email: "",
-  linkedin: "",
-  github: "",
+  domain: "https://vishvanathnaik.com",
+  location: "Berlin, Germany",
+  email: "naik.vishvanath.17@gmail.com",
+  linkedin: "https://www.linkedin.com/in/vishvanath-naik-083140197",
+  github: "https://github.com/vishvanathnaik",
+  resume: "/resume.pdf",
 };

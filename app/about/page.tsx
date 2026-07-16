@@ -1,23 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
+import { approach, education } from "@/lib/profile";
 
 export const metadata: Metadata = { title: "About" };
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About" title="A technical foundation, a wider field of view." intro="I’m interested in the space between disciplines: where engineering meets business, operations meets customer experience, and careful analysis becomes action." />
+      <PageHero
+        eyebrow="About"
+        title="An engineering foundation, applied to customers and business systems."
+        intro="I’m a chemical engineering graduate from NITK Surathkal with experience spanning market research, program management, customer insight, and frontline operations. I’m now based in Berlin and focused on research-led marketing, growth, operations, and energy opportunities."
+      />
       <section className="shell editorial-grid">
         <aside className="margin-note">The short version<br /><span>Systems thinker. Practical operator. Lifelong student.</span></aside>
         <div className="prose-block">
-          <h2>How I approach the work</h2>
-          <p>My background in chemical engineering taught me to look for constraints, flows, feedback loops, and risk. Those habits travel well. I use them to understand organizations, services, markets, and the choices that hold them together.</p>
-          <p>I’m building toward work that combines analytical depth with commercial and human judgment—across operations, project and program management, marketing, startups, and energy.</p>
+          <h2>From technical systems to commercial questions</h2>
+          <p>Studying chemical engineering at the National Institute of Technology Karnataka taught me to break complex problems into components, work with imperfect information, and balance performance against real constraints.</p>
+          <p>At Dime Klear, an early-stage water-filtration startup, I applied SWOT, PESTLE, and Porter’s Five Forces to assess industry dynamics, identify target customer segments, and support marketing outreach. That experience moved me closer to the customer and commercial questions behind technical products.</p>
+          <p>As a Junior Program Manager at Rupeek, I conducted customer research, tracked performance metrics, and worked with cross-functional teams on customer-facing programs. My current role at Wolt in Berlin adds a frontline operating perspective: strategy and customer promises only matter when they hold up in daily execution.</p>
           <blockquote>Start with the system. Stay close to the people inside it. Make the next decision clearer.</blockquote>
-          <h2>What you’ll find here</h2>
-          <p>Projects are where I test a method. Essays are where I develop an argument. Notes hold the useful fragments that are not finished yet. Together, they make the work legible—not just the outcome, but the thinking behind it.</p>
-          <Link className="text-link" href="/projects/">See the work <span aria-hidden="true">→</span></Link>
+          <h2>How I work</h2>
+          <div className="approach-list">
+            {approach.map((item) => (
+              <div className="approach-item" key={item.index}>
+                <span>{item.index}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div>
+              </div>
+            ))}
+          </div>
+          <h2>Education</h2>
+          <p><strong>{education.degree}</strong><br />{education.institution}<br />{education.period}</p>
+          <div className="inline-actions">
+            <Link className="button primary" href="/resume/">View résumé</Link>
+            <Link className="text-link" href="/projects/">See the work <span aria-hidden="true">→</span></Link>
+          </div>
         </div>
       </section>
     </>

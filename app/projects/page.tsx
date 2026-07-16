@@ -9,17 +9,11 @@ export default function ProjectsPage() {
   const projects = content.filter((item) => item.kind === "project");
   return (
     <>
-      <PageHero eyebrow="Projects" title="Learning by making the problem visible." intro="Case studies and experiments across operations, strategy, markets, and energy. Each project starts with a decision—not a tool—and shows the path from evidence to recommendation." />
+      <PageHero eyebrow="Projects" title="Projects that turn open questions into structured decisions." intro="A growing collection of research, strategy, and operating work. Portfolio concepts are labelled honestly and will become full case studies as source material and analysis are added." />
       <section className="shell listing-section">
-        <div className="filter-row" aria-label="Project topics"><span className="filter active">All work</span><span className="filter">Operations</span><span className="filter">Energy</span><span className="filter">Markets</span><span className="filter">Systems</span></div>
-        <div className="card-grid two-column">
-          {projects.map((item) => <div id="last-mile" key={item.title}><ContentCard item={item} /></div>)}
-          <article className="content-card ghost-card">
-            <div className="card-topline"><span>Next study</span><span>05</span></div>
-            <h3>Energy-market go-to-market analysis</h3>
-            <p>A decision-focused study connecting technical feasibility, customer needs, market structure, and an actionable launch path.</p>
-            <div className="tag-row"><span className="tag">Energy</span><span className="tag">Markets</span><span className="tag">Strategy</span></div>
-          </article>
+        <div className="filter-row" aria-label="Project topics"><span className="filter active">All work</span><span className="filter">Marketing</span><span className="filter">Growth</span><span className="filter">Operations</span><span className="filter">Strategy</span><span className="filter">Analytics</span><span className="filter">AI</span><span className="filter">Energy</span></div>
+        <div className="card-grid">
+          {projects.map((item) => <div id={item.href.split("#")[1]} key={item.title}><ContentCard item={item} /></div>)}
         </div>
         <div className="method-strip">
           <p className="eyebrow"><span>✦</span> A simple project standard</p>

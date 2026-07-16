@@ -12,6 +12,7 @@ export function SiteFooter() {
           <Link href="/about/">About</Link>
           <Link href="/projects/">Projects</Link>
           <Link href="/writing/">Writing</Link>
+          <Link href="/resume/">Résumé</Link>
           <Link href="/contact/">Contact</Link>
         </div>
         <div className="footer-meta">
