@@ -45,13 +45,13 @@ export const content: ContentItem[] = [
   },
   {
     index: "03",
-    title: "ExxonMobil and Guyana’s Economic Transformation",
-    description: "How can a resource-led transformation be evaluated across commercial opportunity, public value, and long-term risk?",
+    title: "Guyana’s Resource-Led Economic Transformation",
+    description: "How can petroleum revenue be converted into commercial capability, public value, and long-term resilience?",
     kind: "project",
-    status: "Portfolio concept · developing",
+    status: "Case study · published 24 July 2026",
     topics: ["Energy", "Markets", "Systems"],
-    methods: ["Desk research", "Market analysis", "Scenario framing"],
-    href: "/projects/#exxonmobil-guyana-economic-transformation",
+    methods: ["Public-source research", "Scenario modeling", "Program design", "Risk controls"],
+    href: "/projects/guyana-economic-transformation/",
     featured: true,
   },
   {
