@@ -23,6 +23,17 @@ export const topics = [
 export const content: ContentItem[] = [
   {
     index: "01",
+    title: "Last-Mile Delivery Throughput Optimization",
+    description: "How can a five-station delivery network reduce departure delays while protecting service, labor, and safety guardrails?",
+    kind: "project",
+    status: "Case study · complete",
+    topics: ["Operations", "Systems", "People"],
+    methods: ["DMAIC", "KPI modeling", "Pilot design", "Program governance"],
+    href: "/projects/last-mile-delivery/",
+    featured: true,
+  },
+  {
+    index: "02",
     title: "Wolt Customer and Operations Growth Study",
     description: "Where do customer expectations and operating realities create the clearest opportunities for sustainable growth?",
     kind: "project",
@@ -33,7 +44,7 @@ export const content: ContentItem[] = [
     featured: true,
   },
   {
-    index: "02",
+    index: "03",
     title: "ExxonMobil and Guyana’s Economic Transformation",
     description: "How can a resource-led transformation be evaluated across commercial opportunity, public value, and long-term risk?",
     kind: "project",
@@ -44,7 +55,7 @@ export const content: ContentItem[] = [
     featured: true,
   },
   {
-    index: "03",
+    index: "04",
     title: "AI-Assisted Marketing Research System",
     description: "How can AI accelerate research synthesis while preserving source quality, human judgment, and traceability?",
     kind: "project",
@@ -52,10 +63,9 @@ export const content: ContentItem[] = [
     topics: ["Markets", "Systems", "People"],
     methods: ["Workflow design", "Prompt systems", "Insight synthesis"],
     href: "/projects/#ai-assisted-marketing-research-system",
-    featured: true,
   },
   {
-    index: "04",
+    index: "05",
     title: "What chemical engineering taught me about marketing systems",
     description: "A practical look at feedback loops, constraints, and trade-offs—and why they matter when designing customer acquisition and growth strategies.",
     kind: "essay",
@@ -64,7 +74,7 @@ export const content: ContentItem[] = [
     href: "/writing/#chemical-engineering-marketing-systems",
   },
   {
-    index: "05",
+    index: "06",
     title: "Customer insight meets frontline operations",
     description: "Lessons from connecting customer research and program work with the daily realities of service quality, speed, and execution.",
     kind: "essay",
@@ -73,7 +83,7 @@ export const content: ContentItem[] = [
     href: "/writing/#customer-insight-frontline-operations",
   },
   {
-    index: "06",
+    index: "07",
     title: "How to research an energy transition without losing the system",
     description: "A framework for examining commercial opportunity, public value, and long-term risk in resource-led economic transitions.",
     kind: "essay",
@@ -82,7 +92,7 @@ export const content: ContentItem[] = [
     href: "/writing/#researching-energy-transitions-as-systems",
   },
   {
-    index: "07",
+    index: "08",
     title: "What process engineering teaches strategy",
     description: "Notes on constraints, feedback loops, and why technically sound plans can still fail in organizations.",
     kind: "note",
@@ -91,7 +101,7 @@ export const content: ContentItem[] = [
     href: "/notes/#process-strategy",
   },
   {
-    index: "08",
+    index: "09",
     title: "The fog around money",
     description: "Reading notes and open questions on money creation, banking, and the stories systems tell about themselves.",
     kind: "reading",
