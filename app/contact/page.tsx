@@ -8,6 +8,7 @@ const links = [
   { label: "Email", href: `mailto:${site.email}` },
   { label: "LinkedIn", href: site.linkedin },
   { label: "GitHub", href: site.github },
+  ...(site.facebook ? [{ label: "Facebook", href: site.facebook }] : []),
 ];
 
 export default function ContactPage() {

@@ -4,7 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MenuIcon } from "@/components/icons";
-import { navigation } from "@/lib/content";
+
+const navigation = [
+  { label: "Services", href: "/#services" },
+  { label: "Selected work", href: "/#work" },
+  { label: "Field notes", href: "/#field-notes" },
+  { label: "About", href: "/about/" },
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -27,7 +33,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link className="contact-link" href="/contact/" onClick={() => setOpen(false)}>Let&apos;s talk <span aria-hidden="true">↗</span></Link>
+          <Link className="contact-link" href="/#contact" onClick={() => setOpen(false)}>Start a project <span aria-hidden="true">↗</span></Link>
         </nav>
       </div>
     </header>

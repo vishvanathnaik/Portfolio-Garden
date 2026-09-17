@@ -5,16 +5,16 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vishvanathnaik.com"),
-  title: { default: "Vishvanath Naik — Systems, stories & useful work", template: "%s — Vishvanath Naik" },
-  description: "Portfolio of Vishvanath Naik: projects, experience, essays, and field notes across marketing, operations, engineering, markets, AI, and energy.",
+  title: { default: "Vishvanath Naik — Research, Operations & Sustainability", template: "%s — Vishvanath Naik" },
+  description: "Independent research and project support for startups and SMEs across urban impact, market research, operations, program management, and sustainability reporting.",
   openGraph: {
-    title: "Vishvanath Naik — Systems, stories & useful work",
-    description: "Projects and experience connecting engineering, customers, operations, markets, AI, and energy.",
+    title: "Vishvanath Naik — Research, Operations & Sustainability",
+    description: "Research and project support connecting markets, operations, urban systems, and credible sustainability evidence.",
     url: "https://vishvanathnaik.com",
     siteName: "Vishvanath Naik",
     type: "website",
   },
-  twitter: { card: "summary", title: "Vishvanath Naik — Systems, stories & useful work", description: "Projects and experience across engineering, marketing, operations, markets, AI, and energy." },
+  twitter: { card: "summary", title: "Vishvanath Naik — Research, Operations & Sustainability", description: "Research and project support for startups and SMEs." },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
